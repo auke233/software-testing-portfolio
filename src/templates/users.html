@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}用户列表{% endblock %}
+{% block heading %}用户列表{% endblock %}
+{% block content %}
+<p class="tip">当前登录：{{ current_user }}　|　<a href="{{ url_for('logout') }}">退出登录</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>用户名</th>
+      <th>邮箱</th>
+      <th>注册时间</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for u in users %}
+    <tr>
+      <td>{{ u["id"] }}</td>
+      <td>{{ u["username"] }}</td>
+      <td>{{ u["email"] }}</td>
+      <td>{{ u["created_at"] }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="4">暂无用户</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

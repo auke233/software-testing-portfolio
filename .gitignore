@@ -1,0 +1,24 @@
+# 虚拟环境
+venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 本地数据库
+*.db
+
+# 测试缓存
+.pytest_cache/
+
+# 编辑器
+.vscode/
+.idea/
+
+# 个人隐私：简历不上传到公开仓库
+resume.html
+张俊烽-简历.pdf
+docs/讲解稿.md
+
+# Claude Code 本地配置
+.claude/
